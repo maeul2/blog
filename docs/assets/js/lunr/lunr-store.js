@@ -48,7 +48,7 @@ var store = [{
         "teaser": "https://drive.google.com/thumbnail?id=15kauv4PBBOMEs774kuekYSNjGL28YlDh&sz=w1000"
       },{
         "title": "이토록 다정한 개인주의자",
-        "excerpt":"이 책을 일게 된 계기는 책의 목차에서 ‘고속버스 좌석 등받이를 마음대로 젖혀도 괜찮을까?’ 라는 제목을 보고 흥미가 동해서 이다. (최근에 비행기나 고속 버스에서 등받이를 젖혀도 되느냐 마냐로 논란이 일었다.) 이 외에도 책에서는 기냐 아니냐로 논란이 일었던 사건들을 다루고 있다. 과연 이 책에서는 어떤 입장의 손을 들어줄까? 라는 생각을 하며 책을...","categories": ["LIBRARY"],
+        "excerpt":"이 책을 읽게 된 계기는 책의 목차에서 ‘고속버스 좌석 등받이를 마음대로 젖혀도 괜찮을까?’ 라는 제목을 보고 흥미가 동해서 이다. (최근에 비행기나 고속 버스에서 등받이를 젖혀도 되느냐 마냐로 논란이 일었다.) 이 외에도 책에서는 기냐 아니냐로 논란이 일었던 사건들을 다루고 있다. 과연 이 책에서는 어떤 입장의 손을 들어줄까? 라는 생각을 하며 책을...","categories": ["LIBRARY"],
         "tags": [],
         "url": "/2024/12/%EA%B0%9C%EC%9D%B8%EC%A3%BC%EC%9D%98%EC%9E%90.html",
         "teaser": "https://drive.google.com/thumbnail?id=15GLNkvL4W2YIUxDxoCAScHdPUoy8wjIs&sz=w1000"
@@ -76,6 +76,18 @@ var store = [{
         "tags": [],
         "url": "/2024/12/%EA%B5%AC%EA%B8%80_%EA%B2%80%EC%83%89.html",
         "teaser": "https://drive.google.com/thumbnail?id=11pblLFq91w9F6DYeXCXSpjTzf0bUXUzx&sz=w1000"
+      },{
+        "title": "네이버 검색 노출",
+        "excerpt":"이제 보니 네이버 검색에서도 노출된다!   저~기 뒤에서  ","categories": ["FEED"],
+        "tags": [],
+        "url": "/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html",
+        "teaser": "https://drive.google.com/thumbnail?id=1RXqpL5MLA7ZOVGmWKCo3qgx4DjDHVzoi&sz=w1000"
+      },{
+        "title": "노인과 바다",
+        "excerpt":"중요한 것은 꺾이지 않는 마음   노인과 바다  ","categories": ["LIBRARY"],
+        "tags": ["TODO"],
+        "url": "/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html",
+        "teaser": "https://drive.google.com/thumbnail?id=1j4w6hrIkjQddT811ZhPurXe-fCR8-DM_&sz=w1000"
       },{
         "title": "섬진강 자전거길",
         "excerpt":"신문의 날이 월요일!!!   섬진강 벚꽃길 자전거 여행  ","categories": [],
@@ -172,4 +184,7 @@ var store = [{
   },{
     "title": "마을이네",
     "excerpt":"","url": "https://maeul2.github.io/index.html"
+  },{
+    "title": "마을이네",
+    "excerpt":"","url": "https://maeul2.github.io/page/2/index.html"
   }]

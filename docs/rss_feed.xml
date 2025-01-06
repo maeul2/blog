@@ -5,9 +5,41 @@
     <description>마을이 주인 블로그</description>
     <link>https://maeul2.github.io/</link>
     <atom:link href="https://maeul2.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Dec 2024 08:28:47 +0900</pubDate>
-    <lastBuildDate>Tue, 31 Dec 2024 08:28:47 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Jan 2025 00:51:44 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Jan 2025 00:51:44 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>노인과 바다</title>
+        <description>&lt;p&gt;중요한 것은 꺾이지 않는 마음&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aladin.kr/p/ZFNIV&quot;&gt;노인과 바다&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Jan 2025 00:00:00 +0900</pubDate>
+        <link>https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html</link>
+        <guid isPermaLink="true">https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html</guid>
+        
+        <category>TODO</category>
+        
+        
+        <category>LIBRARY</category>
+        
+      </item>
+    
+      <item>
+        <title>네이버 검색 노출</title>
+        <description>&lt;p&gt;이제 보니 네이버 검색에서도 노출된다!&lt;/p&gt;
+
+&lt;p&gt;저~기 뒤에서&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Jan 2025 00:00:00 +0900</pubDate>
+        <link>https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html</link>
+        <guid isPermaLink="true">https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html</guid>
+        
+        
+        <category>FEED</category>
+        
+      </item>
     
       <item>
         <title>구글 검색 노출!</title>
@@ -89,6 +121,8 @@
 
 &lt;p&gt;계속…&lt;/p&gt;
 
+&lt;p&gt;거의 열흘 간의 장고 끝에 어느 정도 구현을 한 것 같다? 테스트 코드 짜보고 실증이 되면 정리글을 쓰도록 하겠다.&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;참고 자료
     &lt;ul&gt;
@@ -97,7 +131,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Fri, 27 Dec 2024 23:00:00 +0900</pubDate>
+        <pubDate>Fri, 27 Dec 2024 00:00:00 +0900</pubDate>
         <link>https://maeul2.github.io/2024/12/%EC%9D%B4%EB%A0%A5%EA%B4%80%EB%A6%AC_%EA%B3%A0%EB%AF%BC.html</link>
         <guid isPermaLink="true">https://maeul2.github.io/2024/12/%EC%9D%B4%EB%A0%A5%EA%B4%80%EB%A6%AC_%EA%B3%A0%EB%AF%BC.html</guid>
         
@@ -127,7 +161,7 @@
     
       <item>
         <title>이토록 다정한 개인주의자</title>
-        <description>&lt;p&gt;이 책을 일게 된 계기는 책의 목차에서&lt;/p&gt;
+        <description>&lt;p&gt;이 책을 읽게 된 계기는 책의 목차에서&lt;/p&gt;
 
 &lt;p&gt;‘고속버스 좌석 등받이를 마음대로 젖혀도 괜찮을까?’&lt;/p&gt;
 
@@ -243,42 +277,6 @@
         <link>https://maeul2.github.io/initial-commit/</link>
         <guid isPermaLink="true">https://maeul2.github.io/initial-commit/</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>흥이 넘치는 여의도 집회</title>
-        <description>&lt;p&gt;뭐랄까… 집회도 인싸들에게 점령당한 느낌?&lt;/p&gt;
-
-&lt;p&gt;흥? 필?과는 거리가 먼 아싸는 적응하기 힘들엇다.&lt;/p&gt;
-
-&lt;p&gt;자신의 의견을 흥? 필? 넘치게 전달 할 수 있다는 것은 참 좋은 재능이다.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 13 Dec 2024 00:00:00 +0900</pubDate>
-        <link>https://maeul2.github.io/2024/12/%EC%97%AC%EC%9D%98%EB%8F%84_%ED%83%84%ED%95%B5_%EC%A7%91%ED%9A%8C.html</link>
-        <guid isPermaLink="true">https://maeul2.github.io/2024/12/%EC%97%AC%EC%9D%98%EB%8F%84_%ED%83%84%ED%95%B5_%EC%A7%91%ED%9A%8C.html</guid>
-        
-        
-        <category>FEED</category>
-        
-      </item>
-    
-      <item>
-        <title>1일 1페이지, 세상에서 가장 짧은 교양수업 365</title>
-        <description>&lt;p&gt;지금까지 읽은 내용으로 봤을 때&lt;/p&gt;
-
-&lt;p&gt;네 저는 지금까지 교양이 없는 사람이었고 앞으로도 교양 있는 사람이 되기는 힘들 것 같습니다…&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://aladin.kr/p/dMCTH&quot;&gt;1일 1페이지, 세상에서 가장 짧은 교양수업 365&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 03 Sep 2024 19:25:00 +0900</pubDate>
-        <link>https://maeul2.github.io/2024/09/%EA%B5%90%EC%96%91.html</link>
-        <guid isPermaLink="true">https://maeul2.github.io/2024/09/%EA%B5%90%EC%96%91.html</guid>
-        
-        <category>TODO</category>
-        
-        
-        <category>LIBRARY</category>
         
       </item>
     
