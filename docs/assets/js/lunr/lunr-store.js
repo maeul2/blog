@@ -85,7 +85,7 @@ var store = [{
       },{
         "title": "노인과 바다",
         "excerpt":"중요한 것은 꺾이지 않는 마음   노인과 바다  ","categories": ["LIBRARY"],
-        "tags": ["TODO"],
+        "tags": [],
         "url": "/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html",
         "teaser": "https://drive.google.com/thumbnail?id=1j4w6hrIkjQddT811ZhPurXe-fCR8-DM_&sz=w1000"
       },{
