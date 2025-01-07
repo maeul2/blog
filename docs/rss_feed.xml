@@ -5,8 +5,8 @@
     <description>마을이 주인 블로그</description>
     <link>https://maeul2.github.io/</link>
     <atom:link href="https://maeul2.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Jan 2025 20:35:58 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Jan 2025 20:35:58 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Jan 2025 20:40:27 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Jan 2025 20:40:27 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
@@ -106,7 +106,7 @@
 
 &lt;p&gt;이벤트가 발생하는 도메인의 인프라 계층에서 도메인 이벤트 &amp;lt;-&amp;gt; 이력 관리 용 이벤트 변환을 하기로 한다.&lt;/p&gt;
 
-&lt;p&gt;큰 틀애서 바운디드 컨텍스트는 나눈 것 같은데…&lt;/p&gt;
+&lt;p&gt;큰 틀에서 바운디드 컨텍스트는 나눈 것 같은데…&lt;/p&gt;
 
 &lt;p&gt;여기서 가장 큰 고민이&lt;/p&gt;
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://maeul2.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maeul2.github.io/" rel="alternate" type="text/html" /><updated>2025-01-07T20:35:58+09:00</updated><id>https://maeul2.github.io/feed.xml</id><title type="html">마을이네</title><subtitle>마을이 주인 블로그</subtitle><author><name>WSL2077</name></author><entry><title type="html">네이버 검색 노출</title><link href="https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html" rel="alternate" type="text/html" title="네이버 검색 노출" /><published>2025-01-07T00:00:00+09:00</published><updated>2025-01-07T00:52:10+09:00</updated><id>https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89</id><content type="html" xml:base="https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html"><![CDATA[<p>이제 보니 네이버 검색에서도 노출된다!</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://maeul2.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maeul2.github.io/" rel="alternate" type="text/html" /><updated>2025-01-07T20:40:27+09:00</updated><id>https://maeul2.github.io/feed.xml</id><title type="html">마을이네</title><subtitle>마을이 주인 블로그</subtitle><author><name>WSL2077</name></author><entry><title type="html">네이버 검색 노출</title><link href="https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html" rel="alternate" type="text/html" title="네이버 검색 노출" /><published>2025-01-07T00:00:00+09:00</published><updated>2025-01-07T00:52:10+09:00</updated><id>https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89</id><content type="html" xml:base="https://maeul2.github.io/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html"><![CDATA[<p>이제 보니 네이버 검색에서도 노출된다!</p>
 
 <p>저~기 뒤에서</p>]]></content><author><name>WSL2077</name></author><category term="FEED" /><summary type="html"><![CDATA[이제 보니 네이버 검색에서도 노출된다!]]></summary></entry><entry><title type="html">노인과 바다</title><link href="https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html" rel="alternate" type="text/html" title="노인과 바다" /><published>2025-01-02T00:00:00+09:00</published><updated>2025-01-07T15:33:03+09:00</updated><id>https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4</id><content type="html" xml:base="https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html"><![CDATA[<p>중요한 것은 꺾이지 않는 마음</p>
 
@@ -41,7 +41,7 @@
 
 <p>이벤트가 발생하는 도메인의 인프라 계층에서 도메인 이벤트 &lt;-&gt; 이력 관리 용 이벤트 변환을 하기로 한다.</p>
 
-<p>큰 틀애서 바운디드 컨텍스트는 나눈 것 같은데…</p>
+<p>큰 틀에서 바운디드 컨텍스트는 나눈 것 같은데…</p>
 
 <p>여기서 가장 큰 고민이</p>
 
