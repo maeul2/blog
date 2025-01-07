@@ -41,7 +41,7 @@
 
 
 
-  <meta property="article:modified_time" content="2025-01-07T00:52:10+09:00">
+  <meta property="article:modified_time" content="2025-01-07T08:27:16+09:00">
 
 
 
@@ -354,7 +354,7 @@
     <meta itemprop="headline" content="개발 카테고리를 처음 만들며… 요즘 고민">
     <meta itemprop="description" content="작성 중…">
     <meta itemprop="datePublished" content="2024-12-27T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2025-01-07T00:52:10+09:00">
+    <meta itemprop="dateModified" content="2025-01-07T08:27:16+09:00">
 
     <div class="page__inner-wrap">
       
@@ -398,7 +398,7 @@
         
         <p>요즘 업무에서도 그렇고 개인 공부하면서도 그렇고</p>
 
-<p>어느 한 도메인에서 일어난 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다.</p>
+<p>도메인에서 발생하는 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다.</p>
 
 <p>왜 하느냐? 하면…</p>
 
@@ -417,16 +417,16 @@
 
 <p>어플리케이션 계층 관점에서 보자면 <strong>이력 관리</strong> 기능이라고 할 수 있겠다.</p>
 
-<p>우선 이벤트가 일어나는 도메인과 도메인 이벤트들을 저장하고 조회 하는 도메인(앞으로 이력 관리 도메인)으로 나누기로 하였다.</p>
+<p>우선 이벤트가 발생하는 도메인과 도메인 이벤트들을 저장하고 조회 하는 도메인(앞으로 이력 관리 도메인)으로 나누기로 하였다.</p>
 
-<p>이벤트가 일어나는 도메인의 인프라 계층에서 도메인 이벤트 &lt;-&gt; 이력 관리 용 이벤트 변환을 하기로 한다.</p>
+<p>이벤트가 발생하는 도메인의 인프라 계층에서 도메인 이벤트 &lt;-&gt; 이력 관리 용 이벤트 변환을 하기로 한다.</p>
 
 <p>큰 틀애서 바운디드 컨텍스트는 나눈 것 같은데…</p>
 
 <p>여기서 가장 큰 고민이</p>
 
 <ul>
-  <li>어느 도메인에서 발생한 이벤트들을 이력 관리 도메인에 넘겨주기 전까지 어디에 보관하고</li>
+  <li>도메인에서 발생한 이벤트들을 이력 관리 도메인에 넘겨주기 전까지 어디에 보관하고</li>
   <li>이벤트 처리 핸들러를 어디에 구현할 것인가</li>
 </ul>
 
@@ -534,59 +534,6 @@
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
       <div class="archive__item-teaser">
-        <img src="https://drive.google.com/thumbnail?id=1j4w6hrIkjQddT811ZhPurXe-fCR8-DM_&sz=w1000" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html" rel="permalink">노인과 바다
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2025-01-07T00:00:00+09:00">January 7, 2025</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">중요한 것은 꺾이지 않는 마음
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
         <img src="https://drive.google.com/thumbnail?id=1RXqpL5MLA7ZOVGmWKCo3qgx4DjDHVzoi&sz=w1000" alt="">
       </div>
     
@@ -615,6 +562,59 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">이제 보니 네이버 검색에서도 노출된다!
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://drive.google.com/thumbnail?id=1j4w6hrIkjQddT811ZhPurXe-fCR8-DM_&sz=w1000" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html" rel="permalink">노인과 바다
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-01-02T00:00:00+09:00">January 2, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">중요한 것은 꺾이지 않는 마음
 
 </p>
   </article>

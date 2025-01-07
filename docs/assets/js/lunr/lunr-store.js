@@ -60,7 +60,7 @@ var store = [{
         "teaser": "https://drive.google.com/thumbnail?id=15Qt8ULBmsdmzzGPQVZA-KAfi1n1Ip5Aw&sz=w1000"
       },{
         "title": "개발 카테고리를 처음 만들며... 요즘 고민",
-        "excerpt":"요즘 업무에서도 그렇고 개인 공부하면서도 그렇고 어느 한 도메인에서 일어난 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다. 왜 하느냐? 하면… 이벤트 저장 사용자가 어떤 행위를 하였는지 추후 분석 할 수 있도록 이벤트 조회 저장 된 이벤트를 리플레이 하여 엔티티를 과거 상태로 복원 어플리케이션 계층 관점에서 보자면 이력 관리 기능이라고...","categories": ["DEV","D.D.D"],
+        "excerpt":"요즘 업무에서도 그렇고 개인 공부하면서도 그렇고 도메인에서 발생하는 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다. 왜 하느냐? 하면… 이벤트 저장 사용자가 어떤 행위를 하였는지 추후 분석 할 수 있도록 이벤트 조회 저장 된 이벤트를 리플레이 하여 엔티티를 과거 상태로 복원 어플리케이션 계층 관점에서 보자면 이력 관리 기능이라고 할 수...","categories": ["DEV","D.D.D"],
         "tags": ["TODO"],
         "url": "/2024/12/%EC%9D%B4%EB%A0%A5%EA%B4%80%EB%A6%AC_%EA%B3%A0%EB%AF%BC.html",
         "teaser": "/assets/images/default_teaser.png"
@@ -77,17 +77,17 @@ var store = [{
         "url": "/2024/12/%EA%B5%AC%EA%B8%80_%EA%B2%80%EC%83%89.html",
         "teaser": "https://drive.google.com/thumbnail?id=11pblLFq91w9F6DYeXCXSpjTzf0bUXUzx&sz=w1000"
       },{
-        "title": "네이버 검색 노출",
-        "excerpt":"이제 보니 네이버 검색에서도 노출된다!   저~기 뒤에서  ","categories": ["FEED"],
-        "tags": [],
-        "url": "/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html",
-        "teaser": "https://drive.google.com/thumbnail?id=1RXqpL5MLA7ZOVGmWKCo3qgx4DjDHVzoi&sz=w1000"
-      },{
         "title": "노인과 바다",
         "excerpt":"중요한 것은 꺾이지 않는 마음   노인과 바다  ","categories": ["LIBRARY"],
         "tags": [],
         "url": "/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html",
         "teaser": "https://drive.google.com/thumbnail?id=1j4w6hrIkjQddT811ZhPurXe-fCR8-DM_&sz=w1000"
+      },{
+        "title": "네이버 검색 노출",
+        "excerpt":"이제 보니 네이버 검색에서도 노출된다!   저~기 뒤에서  ","categories": ["FEED"],
+        "tags": [],
+        "url": "/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html",
+        "teaser": "https://drive.google.com/thumbnail?id=1RXqpL5MLA7ZOVGmWKCo3qgx4DjDHVzoi&sz=w1000"
       },{
         "title": "섬진강 자전거길",
         "excerpt":"신문의 날이 월요일!!!   섬진강 벚꽃길 자전거 여행  ","categories": [],

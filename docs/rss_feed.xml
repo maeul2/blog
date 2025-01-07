@@ -5,24 +5,9 @@
     <description>마을이 주인 블로그</description>
     <link>https://maeul2.github.io/</link>
     <atom:link href="https://maeul2.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Jan 2025 01:00:50 +0900</pubDate>
-    <lastBuildDate>Tue, 07 Jan 2025 01:00:50 +0900</lastBuildDate>
+    <pubDate>Tue, 07 Jan 2025 20:35:58 +0900</pubDate>
+    <lastBuildDate>Tue, 07 Jan 2025 20:35:58 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
-    
-      <item>
-        <title>노인과 바다</title>
-        <description>&lt;p&gt;중요한 것은 꺾이지 않는 마음&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://aladin.kr/p/ZFNIV&quot;&gt;노인과 바다&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Tue, 07 Jan 2025 00:00:00 +0900</pubDate>
-        <link>https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html</link>
-        <guid isPermaLink="true">https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html</guid>
-        
-        
-        <category>LIBRARY</category>
-        
-      </item>
     
       <item>
         <title>네이버 검색 노출</title>
@@ -36,6 +21,21 @@
         
         
         <category>FEED</category>
+        
+      </item>
+    
+      <item>
+        <title>노인과 바다</title>
+        <description>&lt;p&gt;중요한 것은 꺾이지 않는 마음&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://aladin.kr/p/ZFNIV&quot;&gt;노인과 바다&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 02 Jan 2025 00:00:00 +0900</pubDate>
+        <link>https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html</link>
+        <guid isPermaLink="true">https://maeul2.github.io/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html</guid>
+        
+        
+        <category>LIBRARY</category>
         
       </item>
     
@@ -83,7 +83,7 @@
         <title>개발 카테고리를 처음 만들며... 요즘 고민</title>
         <description>&lt;p&gt;요즘 업무에서도 그렇고 개인 공부하면서도 그렇고&lt;/p&gt;
 
-&lt;p&gt;어느 한 도메인에서 일어난 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다.&lt;/p&gt;
+&lt;p&gt;도메인에서 발생하는 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다.&lt;/p&gt;
 
 &lt;p&gt;왜 하느냐? 하면…&lt;/p&gt;
 
@@ -102,16 +102,16 @@
 
 &lt;p&gt;어플리케이션 계층 관점에서 보자면 &lt;strong&gt;이력 관리&lt;/strong&gt; 기능이라고 할 수 있겠다.&lt;/p&gt;
 
-&lt;p&gt;우선 이벤트가 일어나는 도메인과 도메인 이벤트들을 저장하고 조회 하는 도메인(앞으로 이력 관리 도메인)으로 나누기로 하였다.&lt;/p&gt;
+&lt;p&gt;우선 이벤트가 발생하는 도메인과 도메인 이벤트들을 저장하고 조회 하는 도메인(앞으로 이력 관리 도메인)으로 나누기로 하였다.&lt;/p&gt;
 
-&lt;p&gt;이벤트가 일어나는 도메인의 인프라 계층에서 도메인 이벤트 &amp;lt;-&amp;gt; 이력 관리 용 이벤트 변환을 하기로 한다.&lt;/p&gt;
+&lt;p&gt;이벤트가 발생하는 도메인의 인프라 계층에서 도메인 이벤트 &amp;lt;-&amp;gt; 이력 관리 용 이벤트 변환을 하기로 한다.&lt;/p&gt;
 
 &lt;p&gt;큰 틀애서 바운디드 컨텍스트는 나눈 것 같은데…&lt;/p&gt;
 
 &lt;p&gt;여기서 가장 큰 고민이&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;어느 도메인에서 발생한 이벤트들을 이력 관리 도메인에 넘겨주기 전까지 어디에 보관하고&lt;/li&gt;
+  &lt;li&gt;도메인에서 발생한 이벤트들을 이력 관리 도메인에 넘겨주기 전까지 어디에 보관하고&lt;/li&gt;
   &lt;li&gt;이벤트 처리 핸들러를 어디에 구현할 것인가&lt;/li&gt;
 &lt;/ul&gt;
 
