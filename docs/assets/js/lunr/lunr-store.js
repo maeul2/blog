@@ -131,7 +131,7 @@ var store = [{
         "url": "/todo/2024-12-31-%EC%9D%BC%EB%B3%B8_%EC%97%AC%ED%96%89/",
         "teaser": "/assets/images/default_teaser.png"
       },{
-        "title": "덕적도-굴업도 여행",
+        "title": "백령도-대청도 여행",
         "excerpt":"대한민국 극단 찍기  ","categories": [],
         "tags": ["여행"],
         "url": "/todo/2025-01-09-%EB%B0%B1%EB%A0%B9%EB%8F%84_%EB%8C%80%EC%B2%AD%EB%8F%84/",
