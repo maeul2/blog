@@ -18,7 +18,7 @@ var store = [{
         "teaser": "/assets/images/default_teaser.png"
       },{
         "title": "연을 쫓는 아이",
-        "excerpt":"작년에 읽은 것 같지만 2025년이 되면서 재작년에 읽은 책.   2022년 취업 후 가장 재미있게 읽은 책은?   파친코 1•2도 재밌게 봤지만 그래도 이 책인 것 같다.   폭력 속의 인간이 얼마나 나약하고 추악해 질 수 있는지,   폭력 속에서도 인간이 얼마나 순수하고 강인할 수 있는지.   소년이여 신화가 되어라!   연을 쫓는 아이  ","categories": ["LIBRARY"],
+        "excerpt":"작년에 읽은 것 같지만 2025년이 되면서 재작년에 읽은 책.   2022년 취업 후 가장 재미있게 읽은 책은?   파친코 1•2도 재밌게 봤지만 그래도 이 책인 것 같다.   폭력 속의 인간이 얼마나 나약하고 추악해질 수 있는지,   폭력 속에서도 인간이 얼마나 강인하고 순수할 수 있는지.   소년이여 신화가 되어라!   연을 쫓는 아이  ","categories": ["LIBRARY"],
         "tags": [],
         "url": "/2023/09/%EC%97%B0%EC%9D%84_%EC%AB%93%EB%8A%94_%EC%95%84%EC%9D%B4.html",
         "teaser": "https://drive.google.com/thumbnail?id=1tY1ZCJYr4rkztAvyBGhpKs_EwCpVSDJR&sz=w1000"
