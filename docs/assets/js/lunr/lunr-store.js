@@ -18,7 +18,7 @@ var store = [{
         "teaser": "/assets/images/default_teaser.png"
       },{
         "title": "연을 쫓는 아이",
-        "excerpt":"작년에 읽은 것 같지만 2025년이 되면서 재작년에 읽은 책.   2022년 취업 후 가장 재미있게 읽은 책은?   파친코 1•2도 재밌게 봤지만 그래도 이 책인 것 같다.   폭력 속의 인간이 얼마나 나약하고 추악해질 수 있는지,   폭력 속에서도 인간이 얼마나 강인하고 순수할 수 있는지.   소년이여 신화가 되어라!   연을 쫓는 아이  ","categories": ["LIBRARY"],
+        "excerpt":"작년에 읽은 것 같지만 2025년이 되면서 재작년에 읽은 책.   2022년 취업 후 가장 재미있게 읽은 책은?   파친코 1•2도 재밌게 봤지만 그래도 이 책인 것 같다.   폭력 앞의 인간이 얼마나 나약하고 추악해질 수 있는지,   폭력 앞에서도 인간이 얼마나 강인하고 순수할 수 있는지.   소년이여 신화가 되어라!   연을 쫓는 아이  ","categories": ["LIBRARY"],
         "tags": [],
         "url": "/2023/09/%EC%97%B0%EC%9D%84_%EC%AB%93%EB%8A%94_%EC%95%84%EC%9D%B4.html",
         "teaser": "https://drive.google.com/thumbnail?id=1tY1ZCJYr4rkztAvyBGhpKs_EwCpVSDJR&sz=w1000"
@@ -94,6 +94,12 @@ var store = [{
         "tags": [],
         "url": "/2025/01/%EB%84%A4%EC%9D%B4%EB%B2%84_%EA%B2%80%EC%83%89.html",
         "teaser": "https://drive.google.com/thumbnail?id=1RXqpL5MLA7ZOVGmWKCo3qgx4DjDHVzoi&sz=w1000"
+      },{
+        "title": "정의감 중독 사회",
+        "excerpt":"인문학 책에서 흔히 이야기하는 현대 사회의 사람들에게서 나타나는 문제들 남의 시선을 너무 의식하는 것 자신에게 너무 엄격한 것 불가항력적인 사고나 실패를 자신의 탓으로 돌리고 절망하는 것(?) 불특정 다수에게 공격적인 것 특히 온라인에서 다른 사람들과 타협하지 않는 것 무조건 자신이 옳다고 여기는 것 의 원인이 정의감 과잉에서 비롯된 것이라는 관점이 흥미로웠다....","categories": ["LIBRARY"],
+        "tags": [],
+        "url": "/2025/01/%EC%A0%95%EC%9D%98%EA%B0%90_%EC%A4%91%EB%8F%85_%EC%82%AC%ED%9A%8C.html",
+        "teaser": "https://drive.google.com/thumbnail?id=1RYh92BW2YWDfRVZZgdsimAaFRL_H29hX&sz=w1000"
       },{
         "title": "섬진강 자전거길",
         "excerpt":"신문의 날이 월요일!!!   섬진강 벚꽃길 자전거 여행  ","categories": [],
