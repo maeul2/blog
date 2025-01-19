@@ -21,5 +21,5 @@ dev:
     children:
       - title: "Security"
         url: "/spring-security/"
-  - title: "MicroService"
+  - title: "Microservice"
     url: "/microservice/"

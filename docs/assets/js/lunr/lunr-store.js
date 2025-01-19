@@ -66,8 +66,8 @@ var store = [{
         "teaser": "https://drive.google.com/thumbnail?id=15Qt8ULBmsdmzzGPQVZA-KAfi1n1Ip5Aw&sz=w1000"
       },{
         "title": "개발 카테고리를 처음 만들며... 요즘 고민",
-        "excerpt":"요즘 업무에서도 그렇고 개인 공부하면서도 그렇고 도메인에서 발생하는 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다. 왜 하느냐? 하면… 이벤트 저장 사용자가 어떤 행위를 하였는지 추후 분석 할 수 있도록 이벤트 조회 저장 된 이벤트를 리플레이 하여 엔티티를 과거 상태로 복원 어플리케이션 계층 관점에서 보자면 이력 관리 기능이라고 할 수...","categories": ["DEV","D.D.D"],
-        "tags": ["TODO"],
+        "excerpt":"요즘 업무에서도 그렇고 개인 공부하면서도 그렇고 도메인에서 발생하는 이벤트들을 기록하는 기능을 어떻게 구현해야 할지 고민 중이다. 왜 하느냐? 하면… 이벤트 저장 사용자가 어떤 행위를 하였는지 추후 분석 할 수 있도록 이벤트 조회 저장 된 이벤트를 리플레이 하여 엔티티를 과거 상태로 복원 어플리케이션 계층 관점에서 보자면 이력 관리 기능이라고 할 수...","categories": ["DEV"],
+        "tags": [],
         "url": "/2024/12/%EC%9D%B4%EB%A0%A5%EA%B4%80%EB%A6%AC_%EA%B3%A0%EB%AF%BC.html",
         "teaser": "/assets/images/default_teaser.png"
       },{
@@ -100,6 +100,18 @@ var store = [{
         "tags": [],
         "url": "/2025/01/%EC%A0%95%EC%9D%98%EA%B0%90_%EC%A4%91%EB%8F%85_%EC%82%AC%ED%9A%8C.html",
         "teaser": "https://drive.google.com/thumbnail?id=1RYh92BW2YWDfRVZZgdsimAaFRL_H29hX&sz=w1000"
+      },{
+        "title": "이벤트 소싱을 어떻게 구현 할 것인가?",
+        "excerpt":"긴 고민 끝에 이력 관리 기능을 위한 이벤트 소싱을 구현하여 기록을 남긴다. 단순히 참고자료 이벤트 소싱과 마이크로서비스 아키텍처를 따라 했다면 금방 끝날 일이었지만, 몇 가지 원칙을 최대한 지키고자 노력하느라 시간이 오래 걸렸다. 진짜 잘 지킨건지는 모르겠지만ㅎ 단일 책임 원칙(Single Responsibility Principle) 하나의 클래스는 하나의 책임만 가진다. 개방-폐쇄 원칙(Open-Closed Principle) 변경에는...","categories": ["DEV","Design Pattern"],
+        "tags": ["SRP","OCP","Decorator Pattern","TODO"],
+        "url": "/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1.html",
+        "teaser": "/assets/images/default_teaser.png"
+      },{
+        "title": "마을이",
+        "excerpt":" ","categories": ["FEED"],
+        "tags": [],
+        "url": "/2025/01/%EB%AD%90_%EB%AC%BC%EA%B3%A0%EC%9E%87%EB%83%90.html",
+        "teaser": "https://drive.google.com/thumbnail?id=1n7poHwi4Kvd6x_Zq4dEGsg6XMlxQO22-&sz=w1000"
       },{
         "title": "섬진강 자전거길",
         "excerpt":"신문의 날이 월요일!!!   섬진강 벚꽃길 자전거 여행  ","categories": [],
@@ -182,14 +194,14 @@ var store = [{
     "title": "Library",
     "excerpt":"","url": "https://maeul2.github.io/library/index.html"
   },{
+    "title": "MICROSERVICE",
+    "excerpt":"","url": "https://maeul2.github.io/microservice/index.html"
+  },{
     "title": "Spring Security",
     "excerpt":"","url": "https://maeul2.github.io/spring-security/index.html"
   },{
     "title": "Spring",
     "excerpt":"","url": "https://maeul2.github.io/spring/index.html"
-  },{
-    "title": "MICROSERVICE",
-    "excerpt":"","url": "https://maeul2.github.io/microservice/index.html"
   },{
     "title": "Design Pattern",
     "excerpt":"","url": "https://maeul2.github.io/design-pattern/index.html"
