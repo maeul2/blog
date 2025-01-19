@@ -5,8 +5,8 @@
     <description>마을이 주인 블로그</description>
     <link>https://maeul2.github.io/</link>
     <atom:link href="https://maeul2.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jan 2025 08:09:34 +0900</pubDate>
-    <lastBuildDate>Mon, 20 Jan 2025 08:09:34 +0900</lastBuildDate>
+    <pubDate>Mon, 20 Jan 2025 08:57:07 +0900</pubDate>
+    <lastBuildDate>Mon, 20 Jan 2025 08:57:07 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
@@ -47,7 +47,8 @@
 
 &lt;p&gt;&lt;img src=&quot;https://drive.google.com/thumbnail?id=1FEbKYmgPgtgiWBHEk8994SO-RBsJaFtV&amp;amp;sz=w1000&quot; alt=&quot;클래스 다이어그램&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Content타입은 콘텐츠 관리 시스템(CMS)에서 핵심 애그리게이터인 콘텐츠 자체이다. Article타입은 ‘기사’ 콘텐츠를 의미한다.&lt;/p&gt;
+&lt;p&gt;Content타입은 콘텐츠 관리 시스템(CMS)에서 핵심 애그리게이터인 콘텐츠 자체이다. Article타입은 ‘기사’ 콘텐츠를 의미한다. 
+Article클래스와 ArticleEventHanlder클래스는 연관, 집합 관계를 가진다.&lt;/p&gt;
 
 &lt;p&gt;콘텐츠에는 생성과 수정 핵심 도메인 로직이 존재하고, 어플리케이션 계층까지 구현된 상태였다.&lt;/p&gt;
 

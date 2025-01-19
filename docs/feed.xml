@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://maeul2.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maeul2.github.io/" rel="alternate" type="text/html" /><updated>2025-01-20T08:09:34+09:00</updated><id>https://maeul2.github.io/feed.xml</id><title type="html">마을이네</title><subtitle>마을이 주인 블로그</subtitle><author><name>WSL2077</name></author><entry><title type="html">이벤트 소싱을 어떻게 구현 할 것인가?</title><link href="https://maeul2.github.io/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1.html" rel="alternate" type="text/html" title="이벤트 소싱을 어떻게 구현 할 것인가?" /><published>2025-01-19T00:00:00+09:00</published><updated>2025-01-20T00:10:03+09:00</updated><id>https://maeul2.github.io/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1</id><content type="html" xml:base="https://maeul2.github.io/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1.html"><![CDATA[<p>긴 고민 끝에 이력 관리 기능을 위한 이벤트 소싱을 구현하여 기록을 남긴다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://maeul2.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maeul2.github.io/" rel="alternate" type="text/html" /><updated>2025-01-20T08:57:07+09:00</updated><id>https://maeul2.github.io/feed.xml</id><title type="html">마을이네</title><subtitle>마을이 주인 블로그</subtitle><author><name>WSL2077</name></author><entry><title type="html">이벤트 소싱을 어떻게 구현 할 것인가?</title><link href="https://maeul2.github.io/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1.html" rel="alternate" type="text/html" title="이벤트 소싱을 어떻게 구현 할 것인가?" /><published>2025-01-19T00:00:00+09:00</published><updated>2025-01-20T08:40:39+09:00</updated><id>https://maeul2.github.io/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1</id><content type="html" xml:base="https://maeul2.github.io/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1.html"><![CDATA[<p>긴 고민 끝에 이력 관리 기능을 위한 이벤트 소싱을 구현하여 기록을 남긴다.</p>
 
 <p>단순히 참고자료 <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=342975885" target="_blank">이벤트 소싱과 마이크로서비스 아키텍처</a>를 따라 했다면 금방 끝날 일이었지만,</p>
 
@@ -21,7 +21,8 @@
 
 <p><img src="https://drive.google.com/thumbnail?id=1FEbKYmgPgtgiWBHEk8994SO-RBsJaFtV&amp;sz=w1000" alt="클래스 다이어그램" /></p>
 
-<p>Content타입은 콘텐츠 관리 시스템(CMS)에서 핵심 애그리게이터인 콘텐츠 자체이다. Article타입은 ‘기사’ 콘텐츠를 의미한다.</p>
+<p>Content타입은 콘텐츠 관리 시스템(CMS)에서 핵심 애그리게이터인 콘텐츠 자체이다. Article타입은 ‘기사’ 콘텐츠를 의미한다. 
+Article클래스와 ArticleEventHanlder클래스는 연관, 집합 관계를 가진다.</p>
 
 <p>콘텐츠에는 생성과 수정 핵심 도메인 로직이 존재하고, 어플리케이션 계층까지 구현된 상태였다.</p>
 
