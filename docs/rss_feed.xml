@@ -5,8 +5,8 @@
     <description>마을이 주인 블로그</description>
     <link>https://maeul2.github.io/</link>
     <atom:link href="https://maeul2.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Jan 2025 23:37:27 +0900</pubDate>
-    <lastBuildDate>Sun, 19 Jan 2025 23:37:27 +0900</lastBuildDate>
+    <pubDate>Mon, 20 Jan 2025 08:09:34 +0900</pubDate>
+    <lastBuildDate>Mon, 20 Jan 2025 08:09:34 +0900</lastBuildDate>
     <generator>Jekyll v3.10.0</generator>
     
       <item>
@@ -136,7 +136,7 @@
 &lt;p&gt;이벤트 소싱을 구현하기 앞서 드는 생각.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Content와 Article에 이벤트 소싱 로직직을 추가하기 위해 이미 구현한 코드를 고쳐야 하나(새로운 코드를 끼워 넣어야 하나)?
+  &lt;li&gt;Content와 Article에 이벤트 소싱 로직을 추가하기 위해 이미 구현한 코드를 고쳐야 하나(새로운 코드를 끼워 넣어야 하나)?
     &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;modify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;ArticleContent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;articleContent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nc&quot;&gt;Assert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;notNull&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;articleContent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;articleContent must not be null.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 
@@ -238,7 +238,7 @@
 
 &lt;p&gt;그리고 Content들에서 이벤트들이 발생하고 소비된다고 생각하여 Content타입이 EventHandler타입을 상속하게 하였다.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 로직과 무관한 메소드들이 Content타입을 통해 공개 되어 메소드 호출을 하면 오류가 발생할 여지가 생겼다.&lt;/li&gt;
+  &lt;li&gt;사실 이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 로직과 무관한 메소드들이 공개 되어 호출되면 오류가 발생할 여지가 생겼다.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;이렇게 구현한 이유를 대자면…&lt;/p&gt;

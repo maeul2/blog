@@ -41,7 +41,7 @@
 
 
 
-  <meta property="article:modified_time" content="2025-01-19T23:36:36+09:00">
+  <meta property="article:modified_time" content="2025-01-20T00:10:03+09:00">
 
 
 
@@ -354,7 +354,7 @@
     <meta itemprop="headline" content="이벤트 소싱을 어떻게 구현 할 것인가?">
     <meta itemprop="description" content="작성중…">
     <meta itemprop="datePublished" content="2025-01-19T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2025-01-19T23:36:36+09:00">
+    <meta itemprop="dateModified" content="2025-01-20T00:10:03+09:00">
 
     <div class="page__inner-wrap">
       
@@ -508,7 +508,7 @@
 <p>이벤트 소싱을 구현하기 앞서 드는 생각.</p>
 
 <ul>
-  <li>Content와 Article에 이벤트 소싱 로직직을 추가하기 위해 이미 구현한 코드를 고쳐야 하나(새로운 코드를 끼워 넣어야 하나)?
+  <li>Content와 Article에 이벤트 소싱 로직을 추가하기 위해 이미 구현한 코드를 고쳐야 하나(새로운 코드를 끼워 넣어야 하나)?
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">modify</span><span class="o">(</span><span class="nc">ArticleContent</span> <span class="n">articleContent</span><span class="o">)</span> <span class="o">{</span>
   <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">articleContent</span><span class="o">,</span> <span class="s">"articleContent must not be null."</span><span class="o">);</span>
 
@@ -610,7 +610,7 @@
 
 <p>그리고 Content들에서 이벤트들이 발생하고 소비된다고 생각하여 Content타입이 EventHandler타입을 상속하게 하였다.</p>
 <ul>
-  <li>이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 로직과 무관한 메소드들이 Content타입을 통해 공개 되어 메소드 호출을 하면 오류가 발생할 여지가 생겼다.</li>
+  <li>사실 이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 로직과 무관한 메소드들이 공개 되어 호출되면 오류가 발생할 여지가 생겼다.</li>
 </ul>
 
 <p>이렇게 구현한 이유를 대자면…</p>
@@ -665,7 +665,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-01-19">January 19, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2025-01-20">January 20, 2025</time></p>
 
       </footer>
 
