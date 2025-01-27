@@ -129,7 +129,8 @@
 
 &lt;p&gt;&lt;img src=&quot;https://drive.google.com/thumbnail?id=1FEbKYmgPgtgiWBHEk8994SO-RBsJaFtV&amp;amp;sz=w1000&quot; alt=&quot;클래스 다이어그램&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Content타입은 콘텐츠 관리 시스템(CMS)에서 핵심 애그리게이터인 콘텐츠 자체이다. Article타입은 ‘기사’ 콘텐츠를 의미한다.&lt;/p&gt;
+&lt;p&gt;Content타입은 콘텐츠 관리 시스템(CMS)에서 핵심 애그리게이터인 콘텐츠 자체이다. Article타입은 ‘기사’ 콘텐츠를 의미한다. 
+Article클래스와 ArticleEventHanlder클래스는 연관, 집합 관계를 가진다.&lt;/p&gt;
 
 &lt;p&gt;콘텐츠에는 생성과 수정, 감사 등 핵심 도메인 기능이 존재하고, 어플리케이션 계층까지 구현된 상태였다.&lt;/p&gt;
 
