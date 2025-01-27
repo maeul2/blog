@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>이벤트 소싱을 어떻게 구현 할 것인가? | 마을이네</title>
-<meta name="description" content="작성중…">
+<meta name="description" content="긴 고민 끝에 이력 관리를 위한 이벤트 소싱을 구현하여 기록을 남긴다.">
 
 
   <meta name="author" content="WSL2077">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="https://maeul2.github.io/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1.html">
 
 
-  <meta property="og:description" content="작성중…">
+  <meta property="og:description" content="긴 고민 끝에 이력 관리를 위한 이벤트 소싱을 구현하여 기록을 남긴다.">
 
 
 
@@ -352,7 +352,7 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="이벤트 소싱을 어떻게 구현 할 것인가?">
-    <meta itemprop="description" content="작성중…">
+    <meta itemprop="description" content="긴 고민 끝에 이력 관리를 위한 이벤트 소싱을 구현하여 기록을 남긴다.">
     <meta itemprop="datePublished" content="2025-01-19T00:00:00+09:00">
     <meta itemprop="dateModified" content="2025-01-19T23:36:36+09:00">
 
@@ -384,7 +384,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 분 소요
+          6 분 소요
         
       </span>
     
@@ -396,11 +396,11 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>긴 고민 끝에 이력 관리 기능을 위한 이벤트 소싱을 구현하여 기록을 남긴다.</p>
+        <p>긴 고민 끝에 이력 관리를 위한 이벤트 소싱을 구현하여 기록을 남긴다.</p>
 
 <p>단순히 참고자료 <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=342975885" target="_blank">이벤트 소싱과 마이크로서비스 아키텍처</a>를 따라 했다면 금방 끝날 일이었지만,</p>
 
-<p>몇 가지 원칙을 최대한 지키고자 노력하느라 시간이 오래 걸렸다. 진짜 잘 지킨건지는 모르겠지만ㅎ</p>
+<p>몇 가지 원칙을 최대한 지켜보고자 노력하느라 시간이 오래 걸렸다. 진짜 잘 지킨건지는 모르겠지만ㅎ</p>
 
 <ul>
   <li>단일 책임 원칙(Single Responsibility Principle)
@@ -421,7 +421,7 @@
 
 <p>Content타입은 콘텐츠 관리 시스템(CMS)에서 핵심 애그리게이터인 콘텐츠 자체이다. Article타입은 ‘기사’ 콘텐츠를 의미한다.</p>
 
-<p>콘텐츠에는 생성과 수정 핵심 도메인 로직이 존재하고, 어플리케이션 계층까지 구현된 상태였다.</p>
+<p>콘텐츠에는 생성과 수정, 감사 등 핵심 도메인 기능이 존재하고, 어플리케이션 계층까지 구현된 상태였다.</p>
 
 <ul>
   <li>생성
@@ -490,7 +490,7 @@
                     <span class="o">.</span><span class="na">body</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">getBody</span><span class="o">())</span>
                     <span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">getSource</span><span class="o">())</span>
                     <span class="o">.</span><span class="na">writer</span><span class="o">(</span><span class="n">writer</span><span class="o">)</span>
-                    <span class="o">.</span><span class="na">isDraft</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">isDraft</span><span class="o">())</span>
+                    <span class="o">.</span><span class="na">temp</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">isTemp</span><span class="o">())</span>
                     <span class="o">.</span><span class="na">build</span><span class="o">()</span>
     <span class="o">);</span>
 <span class="o">}</span>
@@ -498,17 +498,17 @@
   </li>
 </ul>
 
-<p>이벤트 소싱 구현을 위해서는 다음과 같은 핵심 도메인 로직이 구현되어야 한다.</p>
+<p>이벤트 소싱 구현을 위해서는 다음과 같은 핵심 도메인 기능이 구현되어야 한다.</p>
 
 <ul>
-  <li>애그리게이트의 핵심 도메인 로직이 수행 될 때 그 결과로 발생한 이벤트들을 보관</li>
-  <li>저장된 이벤트들을 리플레이 하여 애그리게이트 상태 복원</li>
+  <li>애그리게이트의 핵심 도메인 기능이 수행 될 때 그 결과로 발생한 이벤트들을 보관</li>
+  <li>저장된 이벤트들을 재수화 하여 애그리게이트 상태 복원</li>
 </ul>
 
 <p>이벤트 소싱을 구현하기 앞서 드는 생각.</p>
 
 <ul>
-  <li>Content와 Article에 이벤트 소싱 로직직을 추가하기 위해 이미 구현한 코드를 고쳐야 하나(새로운 코드를 끼워 넣어야 하나)?
+  <li>Content와 Article의 도메인 기능에 이벤트 소싱 기능을 추가하기 위해 코드를 고쳐야 하나(새로운 코드를 끼워 넣어야 하나)?
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">modify</span><span class="o">(</span><span class="nc">ArticleContent</span> <span class="n">articleContent</span><span class="o">)</span> <span class="o">{</span>
   <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">articleContent</span><span class="o">,</span> <span class="s">"articleContent must not be null."</span><span class="o">);</span>
 
@@ -524,7 +524,7 @@
 <span class="o">}</span>
 </code></pre></div>    </div>
   </li>
-  <li>애그리게이트를 수정하지 않는다면 어플리케이션 서비스에서 이벤트를 생성하고 보관을 해야 하나(결국 코드를 추가해야 하나)?
+  <li>애그리게이트를 수정하지 않는다면 어플리케이션 서비스에서 이벤트를 생성하고 보관을 해야 하나(결국 코드를 수정해야 하나)?
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
 <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">action</span><span class="o">(</span><span class="nc">Article</span> <span class="n">article</span><span class="o">,</span> <span class="nc">ModifyArticle</span> <span class="n">cmd</span><span class="o">)</span> <span class="o">{</span>
     <span class="o">...</span>
@@ -551,24 +551,24 @@
 <ul>
   <li>단일 책임 원칙
     <ul>
-      <li>Content와 Article클래스에 이력 관리 기능을 위한 이벤트 소싱 코드를 추가하는게 맞나? 이 클래스들에는 콘텐츠 관련(생성, 수정, 감사 등) 도메인 로직만 들어가는게 맞지 않나?</li>
-      <li>콘텐츠 생성과 수정을 담당하는 어플리케이션 계층 코드에 이력 관리 기능을 위한 이벤트 소싱 코드를 추가하는게 맞나?</li>
+      <li>Content와 Article클래스에 이벤트 소싱 기능 코드를 추가하는게 맞나? 이 클래스들에는 콘텐츠 관련(생성, 수정, 감사 등) 도메인 기능만 들어가는게 맞지 않나?</li>
+      <li>콘텐츠 생성과 수정을 담당하는 어플리케이션 계층 코드에 이벤트 소싱 기능 구현 코드를 추가하는게 맞나?</li>
     </ul>
   </li>
   <li>개방 폐쇄 원칙
     <ul>
-      <li>앞으로 기능을 추가 할 때마다 도메인 로직이나 어플리케이션 로직을 수정해야 하는가?</li>
+      <li>도메인 영역 외의 기능을 추가 할 때마다 클래스의 코드를 수정해야 하는가?</li>
     </ul>
   </li>
 </ul>
 
 <p>원칙에 어긋나는 것으로 보였다.</p>
 
-<p>어떻게 하면 위 두 원칙을 지키며 이벤트 소싱을 구현할까 이리저리 짱구를 굴리다가…</p>
+<p>어떻게 하면 위 두 원칙을 지키며 이벤트 소싱을 구현할까 이리저리 머리를 굴리다가…</p>
 
 <p><strong>데코레이터 패턴</strong>을 사용해 보기로 하였다.</p>
 
-<p>우선, 이벤트 소싱 기능의 핵심 도메인 로직을 구현한 추상 클래스를 만들었다.</p>
+<p>우선, 이벤트 소싱의 핵심 기능을 구현한 추상 클래스를 만들었다.</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">EventHandler</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Event</span><span class="o">&gt;</span> <span class="n">events</span><span class="o">;</span>
 
@@ -607,13 +607,295 @@
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@NoArgsConstructor</span><span class="o">(</span><span class="n">access</span> <span class="o">=</span> <span class="nc">AccessLevel</span><span class="o">.</span><span class="na">PROTECTED</span><span class="o">,</span> <span class="n">force</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+<span class="nd">@MappedSuperclass</span>
+<span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Content</span> <span class="kd">extends</span> <span class="nc">EventHandler</span> <span class="o">{</span>
+    <span class="nd">@EmbeddedId</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="no">ID</span> <span class="n">id</span><span class="o">;</span>
 
+    <span class="nd">@Enumerated</span><span class="o">(</span><span class="nc">EnumType</span><span class="o">.</span><span class="na">STRING</span><span class="o">)</span>
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"CONTENT_ATTRIBUTE"</span><span class="o">,</span> <span class="n">updatable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Attribute</span> <span class="n">contentAttribute</span><span class="o">;</span>
+
+    <span class="nd">@Convert</span><span class="o">(</span><span class="n">converter</span> <span class="o">=</span> <span class="nc">Status</span><span class="o">.</span><span class="na">Converter</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"CMS_STATUS"</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">Status</span> <span class="n">status</span><span class="o">;</span>
+
+    <span class="nd">@Embedded</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Registerer</span> <span class="n">registerer</span><span class="o">;</span>
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"REGISTER_DATETIME"</span><span class="o">,</span> <span class="n">updatable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="kd">final</span> <span class="nc">OffsetDateTime</span> <span class="n">registerDateTime</span><span class="o">;</span>
+
+    <span class="nd">@Embedded</span>
+    <span class="kd">private</span> <span class="nc">Updater</span> <span class="n">updater</span><span class="o">;</span>
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"UPDATE_DATETIME"</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">OffsetDateTime</span> <span class="n">updateDateTime</span><span class="o">;</span>
+
+    <span class="nd">@Embedded</span>
+    <span class="kd">private</span> <span class="nc">Desk</span> <span class="n">desk</span><span class="o">;</span>
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"DESK_DATETIME"</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">OffsetDateTime</span> <span class="n">deskDateTime</span><span class="o">;</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"DIST_DATETIME"</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">OffsetDateTime</span> <span class="n">distDateTime</span><span class="o">;</span>
+
+    <span class="nd">@Column</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"DELETE_YN"</span><span class="o">,</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">false</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">Boolean</span> <span class="n">deleted</span><span class="o">;</span>
+
+    <span class="nd">@Version</span>
+    <span class="kd">private</span> <span class="kt">long</span> <span class="n">version</span><span class="o">;</span>
+
+    <span class="kd">protected</span> <span class="nf">Content</span><span class="o">(</span>
+            <span class="no">ID</span> <span class="n">contentsId</span><span class="o">,</span>
+            <span class="nc">Attribute</span> <span class="n">contentAttribute</span><span class="o">,</span>
+            <span class="nc">User</span> <span class="n">registerer</span><span class="o">,</span>
+            <span class="nc">OffsetDateTime</span> <span class="n">registerDateTime</span>
+    <span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">contentsId</span><span class="o">,</span> <span class="s">"콘텐츠 아이디가 null일 수 없습니다."</span><span class="o">);</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">contentAttribute</span><span class="o">,</span> <span class="s">"콘텐츠 속성이 null일 수 없습니다."</span><span class="o">);</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">registerer</span><span class="o">,</span> <span class="s">"등록자가 null일 수 없습니다."</span><span class="o">);</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">registerDateTime</span><span class="o">,</span> <span class="s">"등록 일시가 null일 수 없습니다."</span><span class="o">);</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">contentsId</span><span class="o">;</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">contentAttribute</span> <span class="o">=</span> <span class="n">contentAttribute</span><span class="o">;</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">registerer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Registerer</span><span class="o">(</span><span class="n">registerer</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">registerer</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span> <span class="k">new</span> <span class="nc">Department</span><span class="o">(</span><span class="n">registerer</span><span class="o">.</span><span class="na">getDeptId</span><span class="o">(),</span> <span class="n">registerer</span><span class="o">.</span><span class="na">getDeptName</span><span class="o">()),</span> <span class="n">registerer</span><span class="o">.</span><span class="na">isDesk</span><span class="o">());</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">registerDateTime</span> <span class="o">=</span> <span class="n">registerDateTime</span><span class="o">;</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">deleted</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">audit</span><span class="o">(</span><span class="nc">User</span> <span class="n">updater</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">updater</span><span class="o">,</span> <span class="s">"수정자가 null일 수 없습니다."</span><span class="o">);</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">updater</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Updater</span><span class="o">(</span>
+                <span class="n">updater</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">updater</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span>
+                <span class="k">new</span> <span class="nf">Department</span><span class="o">(</span><span class="n">updater</span><span class="o">.</span><span class="na">getDeptId</span><span class="o">(),</span> <span class="n">updater</span><span class="o">.</span><span class="na">getDeptName</span><span class="o">()),</span>
+                <span class="n">updater</span><span class="o">.</span><span class="na">isDesk</span><span class="o">()</span>
+        <span class="o">);</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">updateDateTime</span> <span class="o">=</span> <span class="nc">OffsetDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">updater</span><span class="o">.</span><span class="na">isDesk</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">desk</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Desk</span><span class="o">(</span>
+                    <span class="n">updater</span><span class="o">.</span><span class="na">getId</span><span class="o">(),</span> <span class="n">updater</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span>
+                    <span class="k">new</span> <span class="nf">Department</span><span class="o">(</span><span class="n">updater</span><span class="o">.</span><span class="na">getDeptId</span><span class="o">(),</span> <span class="n">updater</span><span class="o">.</span><span class="na">getDeptName</span><span class="o">()),</span>
+                    <span class="n">updater</span><span class="o">.</span><span class="na">isDesk</span><span class="o">()</span>
+            <span class="o">);</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">deskDateTime</span> <span class="o">=</span> <span class="nc">OffsetDateTime</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">setStatus</span><span class="o">();</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">changeStatus</span><span class="o">(</span><span class="nc">Status</span> <span class="n">newStatus</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">newStatus</span><span class="o">,</span> <span class="s">"status must not be null."</span><span class="o">);</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">status</span> <span class="o">=</span> <span class="n">newStatus</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">delete</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">deleted</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="c1">//접근자</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+<span class="o">}</span>
+</code></pre></div></div>
 <p>그리고 Content들에서 이벤트들이 발생하고 소비된다고 생각하여 Content타입이 EventHandler타입을 상속하게 하였다.</p>
 <ul>
-  <li>이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 로직과 무관한 메소드들이 Content타입을 통해 공개 되어 메소드 호출을 하면 오류가 발생할 여지가 생겼다.</li>
+  <li>이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 로직과 무관한 메소드들이 Content타입을 통해 공개 되어 메소드 호출을 하면 오류가 발생할 여지가 생겼다. 이렇게 했을 때 단일 책임 원칙을 준수한다고 말할 수 있는 것인가..?</li>
 </ul>
 
-<p>이렇게 구현한 이유를 대자면…</p>
+<p>EventHandler클래스의 기능을 EventHandler클래스를 상속하지 않고 Content클래스에서 구현 할 수 있지만, 이렇게 구현한 이유를 대자면…</p>
+
+<ol>
+  <li>Content클래스가 EventHandler클래스를 상속하도록 Content클래스를 수정 해도 기존 Content클래스를 사용하던 코드들에는 아무런 영향을 미치지 않는다(코드 수정 필요x).
+    <ul>
+      <li>위 콘텐츠 생성과 수정을 담당하는 어플리케이션 계층 코드들을 수정 할 필요없다.</li>
+    </ul>
+  </li>
+  <li>이벤트 발생, 보관 기능과 콘텐츠의 도메인 기능을 분리. 이렇게 보면 단일 책임 원칙을 준수한다고 할 수 있는 것인가…?</li>
+  <li>어차피 apply메소드는 이벤트 재수화 때문에 공개 된다.</li>
+</ol>
+
+<p>등이 있다(더 나은 방안이 있다면 피드백 적극 환영하는 바이다).</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArticleEventHandler</span> <span class="kd">extends</span> <span class="nc">Article</span> <span class="o">{</span>  <span class="c1">//데코레이터 패턴</span>
+    <span class="kd">private</span> <span class="nc">Article</span> <span class="n">actor</span><span class="o">;</span>  <span class="c1">//위임</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Article</span> <span class="nf">handler</span><span class="o">(</span><span class="nc">Article</span> <span class="n">article</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">article</span><span class="o">,</span> <span class="s">"Article must not be null"</span><span class="o">);</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">article</span><span class="o">.</span><span class="na">isDraft</span><span class="o">())</span> <span class="o">{</span>    <span class="c1">//기사 초안이면</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">ArticleEventHandler</span><span class="o">(</span><span class="k">new</span> <span class="nc">ArticleCreated</span><span class="o">(</span><span class="n">article</span><span class="o">));</span>    <span class="c1">//기사 생성 이벤트 발생</span>
+        <span class="o">}</span>
+
+            <span class="k">return</span> <span class="k">new</span> <span class="nf">ArticleEventHandler</span><span class="o">(</span><span class="n">article</span><span class="o">);</span>    <span class="c1">//기사 초안이 아니면 바로 위임자 설정</span>
+        <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="nf">ArticleEventHandler</span><span class="o">(</span><span class="nc">ArticleCreated</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">event</span><span class="o">,</span> <span class="s">"ArticleCreated argument cannot be null"</span><span class="o">);</span>
+
+        <span class="n">apply</span><span class="o">(</span><span class="n">event</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="nf">ArticleEventHandler</span><span class="o">(</span><span class="nc">Article</span> <span class="n">actor</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">actor</span><span class="o">,</span> <span class="s">"actor must not be null"</span><span class="o">);</span>
+
+        <span class="k">this</span><span class="o">.</span><span class="na">actor</span> <span class="o">=</span> <span class="n">actor</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Article</span> <span class="nf">replayer</span><span class="o">()</span> <span class="o">{</span>  <span class="c1">//이벤트 재수화용 정적 팩토리 메소드</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">ArticleEventHandler</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="nf">ArticleEventHandler</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">actor</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">handle</span><span class="o">(</span><span class="nc">ArticleCreated</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">actor</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">getArticle</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">modify</span><span class="o">(</span><span class="nc">ArticleContent</span> <span class="n">articleContent</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">apply</span><span class="o">(</span><span class="k">new</span> <span class="nc">ArticleModified</span><span class="o">(</span><span class="n">articleContent</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">handle</span><span class="o">(</span><span class="nc">ArticleModified</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">actor</span><span class="o">.</span><span class="na">modify</span><span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">getArticleContent</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">audit</span><span class="o">(</span><span class="nc">User</span> <span class="n">updater</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">apply</span><span class="o">(</span><span class="k">new</span> <span class="nc">ContentAudited</span><span class="o">(</span><span class="n">updater</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">handle</span><span class="o">(</span><span class="nc">ContentAudited</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">actor</span><span class="o">.</span><span class="na">audit</span><span class="o">(</span><span class="n">event</span><span class="o">.</span><span class="na">getUpdater</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setStatus</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">apply</span><span class="o">(</span><span class="k">new</span> <span class="nc">ContentStatusChanged</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">handle</span><span class="o">(</span><span class="nc">ContentStatusChanged</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">actor</span><span class="o">.</span><span class="na">setStatus</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">delete</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">apply</span><span class="o">(</span><span class="k">new</span> <span class="nc">ContentDeleted</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="kt">void</span> <span class="nf">handle</span><span class="o">(</span><span class="nc">ContentDeleted</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">this</span><span class="o">.</span><span class="na">actor</span><span class="o">.</span><span class="na">delete</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">//아래는 접근자 위임</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>정적 팩토리 메소드로 이벤트 핸들러 객체를 생성할 때 상황에 맞는 이벤트를 발생시킨다.</li>
+  <li>기존 도메인 로직을 구현한 메소드들을 확장한다.
+    <ol>
+      <li>도메인 로직을 실행하는 대신 이벤트를 발생, 보관하고</li>
+      <li>이벤트 객체를 받아서 도메인 로직 실행을 위임하는 handle메소드 구현</li>
+    </ol>
+  </li>
+</ol>
+
+<p>여기까지가 콘텐츠의 핵심 도메인 기능과 이력 관리 기능을 위한 이벤트 소싱을 분리하기 위해 머리를 짜낸 결과이다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Transactional</span>
+<span class="kd">public</span> <span class="nc">ContentDTO</span> <span class="nf">manage</span><span class="o">(</span><span class="no">C</span> <span class="n">cmd</span><span class="o">)</span> <span class="o">{</span>   <span class="c1">//템플릿 메소드 패턴</span>
+    <span class="nc">Assert</span><span class="o">.</span><span class="na">notNull</span><span class="o">(</span><span class="n">cmd</span><span class="o">,</span> <span class="s">"command must not be null"</span><span class="o">);</span>
+
+    <span class="no">T</span> <span class="n">content</span> <span class="o">=</span> <span class="n">load</span><span class="o">(</span><span class="n">cmd</span><span class="o">);</span>
+
+    <span class="c1">//락</span>
+    <span class="n">lock</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+
+    <span class="c1">//이벤트 핸들러</span>
+    <span class="no">T</span> <span class="n">handler</span> <span class="o">=</span> <span class="n">handler</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+
+    <span class="c1">//이벤트 기반 작업</span>
+    <span class="n">action</span><span class="o">(</span><span class="n">handler</span><span class="o">,</span> <span class="n">cmd</span><span class="o">);</span>
+
+    <span class="c1">//상태 설정</span>
+    <span class="n">status</span><span class="o">(</span><span class="n">handler</span><span class="o">);</span>
+
+    <span class="c1">//저장</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">store</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>   <span class="c1">//Call by Value of the Reference???</span>
+
+    <span class="c1">//이벤트 처리</span>
+    <span class="n">process</span><span class="o">(</span><span class="n">handler</span><span class="o">);</span>
+
+    <span class="c1">//데스킹 완료 시</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Content</span><span class="o">.</span><span class="na">Status</span><span class="o">.</span><span class="na">DESK_DONE</span> <span class="o">==</span> <span class="n">content</span><span class="o">.</span><span class="na">getStatus</span><span class="o">())</span> <span class="o">{</span>
+        <span class="c1">//배부</span>
+        <span class="n">distribute</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+
+        <span class="c1">//인덱싱</span>
+        <span class="n">index</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">//락 해제</span>
+    <span class="n">unLock</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">ContentDTO</span><span class="o">(</span><span class="n">content</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>여기서 중요한 부분은 템플릿 메소드 manage의 handler메소드와 action메소드이다. 이 부분이 데코레이터 패턴을 차용함으로써 어떤 이득을 볼 수 있는지 보여주는 부분이다.</p>
+
+<ul>
+  <li><a href="https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html">템플릿 메소드 패턴이란?</a></li>
+</ul>
+
+<p>handler메소드에서 이벤트 핸들러 객체를 반환한다.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="nc">Article</span> <span class="nf">handler</span><span class="o">(</span><span class="nc">Article</span> <span class="n">article</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">ArticleEventHandler</span><span class="o">.</span><span class="na">handler</span><span class="o">(</span><span class="n">article</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>반환 타입이 Article이므로 manage메소드의 다른 부분에서는 handler메소드에서 반환된 객체가 마치 Article타입인 것처럼 사용가능하다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">action</span><span class="o">(</span><span class="nc">Article</span> <span class="n">article</span><span class="o">,</span> <span class="nc">ModifyArticle</span> <span class="n">cmd</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">User</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">article</span><span class="o">.</span><span class="na">getWriter</span><span class="o">()</span>   <span class="c1">//작성 이력이 있으면 작성자 계속 유지</span>
+            <span class="o">.</span><span class="na">orElseGet</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="o">{</span>  <span class="c1">//작성 이력이 없고</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">isTemp</span><span class="o">())</span> <span class="o">{</span>    <span class="c1">//임시 저장이면</span>
+                    <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>    <span class="c1">//작성자 미지정</span>
+                <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>    <span class="c1">//첫 작성 완료 시</span>
+                    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">userInfoService</span><span class="o">.</span><span class="na">findUserById</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">getModifierId</span><span class="o">())</span>
+                            <span class="o">.</span><span class="na">orElseThrow</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="nc">UserNotFoundException</span><span class="o">(</span><span class="s">"Not Found User - "</span> <span class="o">+</span> <span class="n">cmd</span><span class="o">.</span><span class="na">getModifierId</span><span class="o">()));</span>
+                <span class="o">}</span>
+            <span class="o">});</span>
+
+    <span class="n">article</span><span class="o">.</span><span class="na">modify</span><span class="o">(</span>
+            <span class="nc">ArticleContent</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+                    <span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">getTitle</span><span class="o">())</span>
+                    <span class="o">.</span><span class="na">body</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">getBody</span><span class="o">())</span>
+                    <span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">getSource</span><span class="o">())</span>
+                    <span class="o">.</span><span class="na">writer</span><span class="o">(</span><span class="n">writer</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">temp</span><span class="o">(</span><span class="n">cmd</span><span class="o">.</span><span class="na">isTemp</span><span class="o">())</span>
+                    <span class="o">.</span><span class="na">build</span><span class="o">()</span>
+    <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p><strong><em>이벤트 소싱 기능을 추가 했음에도 위 action메소드 코드가 변경되지 않았다! 변경에는 닫혀있지만 확장에는 열려있다!</em></strong></p>
+<ul>
+  <li>action메소드는 article파라미터로 넘어온 인자가 ArticleEventHandler타입임에도 이것을 모른채로 article파라미터가 Article타입 인 것처럼 article매게변수를 조작한다.</li>
+</ul>
 
 <p><a href="https://github.com/maeul2/cms-v2" target="_blank">소스 원본은 여기서!</a></p>
 
@@ -636,9 +918,7 @@
     
       <a href="/ocp" class="page__taxonomy-item p-category" rel="tag">OCP</a><span class="sep">, </span>
     
-      <a href="/srp" class="page__taxonomy-item p-category" rel="tag">SRP</a><span class="sep">, </span>
-    
-      <a href="/todo" class="page__taxonomy-item p-category" rel="tag">TODO</a>
+      <a href="/srp" class="page__taxonomy-item p-category" rel="tag">SRP</a>
     
     </span>
   </p>
@@ -703,6 +983,58 @@
   
   <h2 class="page__related-title">참고</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/default_teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html" rel="permalink">템플릿 메소드 패턴을 사용한 콘텐츠 메니지 서비스(CMS)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-01-27T00:00:00+09:00">January 27, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">작성중…
+</p>
+  </article>
+</div>
+
     
       
       
@@ -836,59 +1168,6 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">이제 보니 네이버 검색에서도 노출된다!
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="https://drive.google.com/thumbnail?id=1j4w6hrIkjQddT811ZhPurXe-fCR8-DM_&sz=w1000" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/2025/01/%EB%85%B8%EC%9D%B8%EA%B3%BC_%EB%B0%94%EB%8B%A4.html" rel="permalink">노인과 바다
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2025-01-02T00:00:00+09:00">January 2, 2025</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">중요한 것은 꺾이지 않는 마음
 
 </p>
   </article>

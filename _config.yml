@@ -348,6 +348,7 @@ defaults:
     values:
       sidebar:
         nav: "dev"
+      classes: wide
   # _pages
   - scope:
       path: ""

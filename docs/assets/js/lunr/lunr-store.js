@@ -102,8 +102,8 @@ var store = [{
         "teaser": "https://drive.google.com/thumbnail?id=1RYh92BW2YWDfRVZZgdsimAaFRL_H29hX&sz=w1000"
       },{
         "title": "이벤트 소싱을 어떻게 구현 할 것인가?",
-        "excerpt":"긴 고민 끝에 이력 관리 기능을 위한 이벤트 소싱을 구현하여 기록을 남긴다. 단순히 참고자료 이벤트 소싱과 마이크로서비스 아키텍처를 따라 했다면 금방 끝날 일이었지만, 몇 가지 원칙을 최대한 지키고자 노력하느라 시간이 오래 걸렸다. 진짜 잘 지킨건지는 모르겠지만ㅎ 단일 책임 원칙(Single Responsibility Principle) 하나의 클래스는 하나의 책임만 가진다. 개방-폐쇄 원칙(Open-Closed Principle) 변경에는...","categories": ["DEV","Design Pattern"],
-        "tags": ["SRP","OCP","Decorator Pattern","TODO"],
+        "excerpt":"긴 고민 끝에 이력 관리를 위한 이벤트 소싱을 구현하여 기록을 남긴다. 단순히 참고자료 이벤트 소싱과 마이크로서비스 아키텍처를 따라 했다면 금방 끝날 일이었지만, 몇 가지 원칙을 최대한 지켜보고자 노력하느라 시간이 오래 걸렸다. 진짜 잘 지킨건지는 모르겠지만ㅎ 단일 책임 원칙(Single Responsibility Principle) 하나의 클래스는 하나의 책임만 가진다. 개방-폐쇄 원칙(Open-Closed Principle) 변경에는 닫혀...","categories": ["DEV","Design Pattern"],
+        "tags": ["SRP","OCP","Decorator Pattern"],
         "url": "/2025/01/%EC%9D%B4%EB%B2%A4%ED%8A%B8_%EC%86%8C%EC%8B%B1.html",
         "teaser": "/assets/images/default_teaser.png"
       },{
@@ -112,6 +112,12 @@ var store = [{
         "tags": [],
         "url": "/2025/01/%EB%AD%90_%EB%AC%BC%EA%B3%A0%EC%9E%87%EB%83%90.html",
         "teaser": "https://drive.google.com/thumbnail?id=1n7poHwi4Kvd6x_Zq4dEGsg6XMlxQO22-&sz=w1000"
+      },{
+        "title": "템플릿 메소드 패턴을 사용한 콘텐츠 메니지 서비스(CMS)",
+        "excerpt":"public abstract class ContentManageService&lt;T extends Content, C extends Command&gt; { //템플릿 메소드 패턴 @Transactional public ContentDTO manage(C cmd) { Assert.notNull(cmd, \"command must not be null\"); T content = load(cmd); //락 lock(content); //이벤트 핸들러 T handler = handler(content); //이벤트 기반 작업 action(handler, cmd); //상태 설정 status(handler); //저장 content = store(content); //Call...","categories": ["DEV","Design Pattern"],
+        "tags": ["Template Method Pattern","TODO"],
+        "url": "/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html",
+        "teaser": "/assets/images/default_teaser.png"
       },{
         "title": "섬진강 자전거길",
         "excerpt":"신문의 날이 월요일!!!   섬진강 벚꽃길 자전거 여행  ","categories": [],
