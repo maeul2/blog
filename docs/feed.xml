@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://maeul2.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maeul2.github.io/" rel="alternate" type="text/html" /><updated>2025-01-27T22:03:47+09:00</updated><id>https://maeul2.github.io/feed.xml</id><title type="html">마을이네</title><subtitle>마을이 주인 블로그</subtitle><author><name>WSL2077</name></author><entry><title type="html">템플릿 메소드 패턴을 사용한 콘텐츠 메니지 서비스(CMS)</title><link href="https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html" rel="alternate" type="text/html" title="템플릿 메소드 패턴을 사용한 콘텐츠 메니지 서비스(CMS)" /><published>2025-01-27T00:00:00+09:00</published><updated>2025-01-27T21:46:39+09:00</updated><id>https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4</id><content type="html" xml:base="https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html"><![CDATA[<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">ContentManageService</span><span class="o">&lt;</span><span class="no">T</span> <span class="kd">extends</span> <span class="nc">Content</span><span class="o">,</span> <span class="no">C</span> <span class="kd">extends</span> <span class="nc">Command</span><span class="o">&gt;</span> <span class="o">{</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://maeul2.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://maeul2.github.io/" rel="alternate" type="text/html" /><updated>2025-01-27T22:11:14+09:00</updated><id>https://maeul2.github.io/feed.xml</id><title type="html">마을이네</title><subtitle>마을이 주인 블로그</subtitle><author><name>WSL2077</name></author><entry><title type="html">템플릿 메소드 패턴을 사용한 콘텐츠 메니지 서비스(CMS)</title><link href="https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html" rel="alternate" type="text/html" title="템플릿 메소드 패턴을 사용한 콘텐츠 메니지 서비스(CMS)" /><published>2025-01-27T00:00:00+09:00</published><updated>2025-01-27T21:46:39+09:00</updated><id>https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4</id><content type="html" xml:base="https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html"><![CDATA[<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">ContentManageService</span><span class="o">&lt;</span><span class="no">T</span> <span class="kd">extends</span> <span class="nc">Content</span><span class="o">,</span> <span class="no">C</span> <span class="kd">extends</span> <span class="nc">Command</span><span class="o">&gt;</span> <span class="o">{</span>
     <span class="c1">//템플릿 메소드 패턴</span>
     <span class="nd">@Transactional</span>
     <span class="kd">public</span> <span class="nc">ContentDTO</span> <span class="nf">manage</span><span class="o">(</span><span class="no">C</span> <span class="n">cmd</span><span class="o">)</span> <span class="o">{</span>
@@ -370,7 +370,7 @@
 </code></pre></div></div>
 <p>그리고 Content들에서 이벤트들이 발생하고 소비된다고 생각하여 Content타입이 EventHandler타입을 상속하게 하였다.</p>
 <ul>
-  <li>이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 기능과 무관한 메소드들이 Content타입을 통해 공개 되어 메소드 호출이 되면 오류가 발생할 여지가 생겼다. 이렇게 했을 때 단일 책임 원칙을 준수한다고 말할 수 있는 것인가..?</li>
+  <li>이 분이 좀 마음에 걸린다. 어쨋든 Content타입에 변화가 생겼고, Content의 도메인 기능과 무관한 메소드들이 Content타입을 통해 공개 되어 호출이 되면 오류가 발생할 여지가 생겼다. 이렇게 했을 때 단일 책임 원칙을 준수한다고 말할 수 있는 것인가..?</li>
 </ul>
 
 <p>EventHandler클래스의 기능을 EventHandler클래스를 상속하지 않고 Content클래스에서 구현 할 수 있지만, 이렇게 구현한 이유를 대자면…</p>
@@ -378,7 +378,7 @@
 <ol>
   <li>Content클래스가 EventHandler클래스를 상속하도록 Content클래스를 수정 해도 기존 Content클래스를 사용하던 코드들에는 아무런 영향을 미치지 않는다(코드 수정 필요x).
     <ul>
-      <li>위 콘텐츠 생성과 수정을 담당하는 어플리케이션 계층 코드들을 수정 할 필요없다.</li>
+      <li>콘텐츠 생성과 수정을 담당하는 어플리케이션 계층 코드들을 수정 할 필요없다.</li>
     </ul>
   </li>
   <li>이벤트 발생, 보관 기능과 콘텐츠의 도메인 기능을 분리. 이렇게 보면 단일 책임 원칙을 준수한다고 할 수 있는 것인가…?</li>
@@ -472,7 +472,7 @@
   <li>기존 도메인 로직을 구현한 메소드들을 확장한다.
     <ol>
       <li>도메인 로직을 실행하는 대신 이벤트를 발생, 보관하고</li>
-      <li>이벤트 객체를 받아서 도메인 로직 실행을 위임하는 handle메소드 구현</li>
+      <li>이벤트 객체를 받아서 도메인 기능 실행을 위임하는 handle메소드 구현</li>
     </ol>
   </li>
 </ol>
@@ -522,7 +522,7 @@
 <p>여기서 중요한 부분은 템플릿 메소드 manage의 handler메소드와 action메소드이다. 이 부분이 데코레이터 패턴을 차용함으로써 어떤 이득을 볼 수 있는지 보여주는 부분이다.</p>
 
 <ul>
-  <li><a href="https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html">템플릿 메소드 패턴이란?</a></li>
+  <li><a href="https://maeul2.github.io/2025/01/%EC%BD%98%ED%85%90%EC%B8%A0_%ED%85%9C%ED%94%8C%EB%A6%BF_%EB%A9%94%EC%86%8C%EB%93%9C_%ED%8C%A8%ED%84%B4.html" target="_blank">템플릿 메소드 패턴이란?</a></li>
 </ul>
 
 <p>handler메소드에서 이벤트 핸들러 객체를 반환한다.</p>
