@@ -1,0 +1,431 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Spring Security | 마을이네</title>
+<meta name="description" content="마을이 주인 블로그">
+
+
+  <meta name="author" content="WSL2077">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko">
+<meta property="og:site_name" content="마을이네">
+<meta property="og:title" content="Spring Security">
+<meta property="og:url" content="https://maeul2.github.io/spring-security/">
+
+
+  <meta property="og:description" content="마을이 주인 블로그">
+
+
+
+  <meta property="og:image" content="https://maeul2.github.io/assets/images/og_image.jpg">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://maeul2.github.io/spring-security/">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="En0jSddQmW5fyIpH4aF8eOWO2mtelchvxbLgJMExJjc" />
+
+
+
+
+
+  <meta name="naver-site-verification" content="d213a9aa07ddbb49eda067210fe07787f32ff495">
+
+
+
+<link rel="alternate" type="application/rss+xml" href="https://maeul2.github.io/rss_feed.xml">
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<link rel="icon" type="image/x-icon" href="/assets/images/logo.png">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--category" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/logo.png" alt="마을이네"></a>
+        
+        <a class="site-title" href="/">
+          마을이네
+          <span class="site-subtitle">since 2022.02</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/feed/"
+                
+                
+              >FEED</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/dev/"
+                
+                
+              >DEV</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/todo/"
+                
+                
+              >TODO</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/gallery/"
+                
+                
+              >GALLERY</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/library/"
+                
+                
+              >LIBRARY</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://maeul2.github.io/">
+        <img src="/assets/images/profile.png" alt="WSL2077" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://maeul2.github.io/" itemprop="url">WSL2077</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>개발(자)인 마을이 주인</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">마을이집 구석 한켠<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;책상과 침대</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">토글 메뉴</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <a href="/d-d-d/"><span class="nav__sub-title">D.D.D</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/design-pattern/"><span class="nav__sub-title">Design Pattern</span></a>
+          
+
+          
+        </li>
+      
+        <li>
+          
+            <a href="/spring/"><span class="nav__sub-title">Spring</span></a>
+          
+
+          
+          <ul>
+            
+              <li><a href="/spring-security/">Security</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <a href="/microservice/"><span class="nav__sub-title">Microservice</span></a>
+          
+
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">Spring Security</h1>
+    
+    
+
+
+<div class="entries-list">
+  
+</div>
+
+
+
+
+  </div>
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      
+      
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="https://maeul2.github.io/">마을이네</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

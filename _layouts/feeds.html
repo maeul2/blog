@@ -1,0 +1,16 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+{% assign feeds = paginator.posts | default: site.categories['FEED'] %}
+
+<div class="entries-feed">
+    {% for post in feeds %}
+        {% include feed.html %}
+    {% endfor %}
+</div>
+<a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+
+{% include paginator.html %}

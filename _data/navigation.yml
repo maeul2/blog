@@ -1,12 +1,25 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "FEED"
+    url: "/feed/"
+  - title: "DEV"
+    url: "/dev/"
+  - title: "TODO"
+    url: "/todo/"
+  - title: "GALLERY"  
+    url: "/gallery/"
+  - title: "LIBRARY"
+    url: "/library/"
+
+dev:
+  - title: "D.D.D"
+    url: "/d-d-d/"
+  - title: "Design Pattern"
+    url: "/design-pattern/"
+  - title: "Spring"
+    url: "/spring/"
+    children:
+      - title: "Security"
+        url: "/spring-security/"
+  - title: "Microservice"
+    url: "/microservice/"
